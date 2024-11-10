@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/your_wallpaper_image">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tips for Using the App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#031530"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Tip for navigating the Home Page -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_white_box"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Home Page Navigation: Access the app’s main features from the home page."
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#5E35B1" />
+            </LinearLayout>
+
+            <!-- Tip for Donating Food -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_white_box"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Donating Food: Select 'Donate Food' to provide food items. You’ll be prompted to enter details like food name, expiry date, and category."
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#5E35B1" />
+            </LinearLayout>
+
+            <!-- Tip for Taking Away Food -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_white_box"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Taking Away Food: Check available food on the list. Select an item to view its details and choose 'Take Away' to claim it."
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#5E35B1" />
+            </LinearLayout>
+
+            <!-- Tip for Viewing History -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_white_box"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. Viewing History: Track your donation and takeaway history. Use the search feature to find items by name or category."
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#5E35B1" />
+            </LinearLayout>
+
+            <!-- Tip for Logging Out -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_white_box"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Logging Out: Use the logout option on the home page when you’re done to ensure your account is secure."
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#5E35B1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/backButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:gravity="center"
+        android:background="@drawable/curved_button_background"
+        android:padding="12dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#E6E6F8"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold" />
+    </LinearLayout>
+
+</RelativeLayout>

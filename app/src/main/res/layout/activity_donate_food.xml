@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EDEEFF"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Food Items"
+        android:textColor="#031530"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Scrollable Form Fields -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Food Name Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/ic_food"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/foodName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Food Name"
+                        android:inputType="text"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColorHint="#5E35B1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Expiry Date Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/expiryDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Expiry Date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18sp"
+                        android:textColorHint="#5E35B1"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Quantity Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/ic_quantity"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/quantity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Enter Quantity"
+                        android:inputType="number"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColorHint="#5E35B1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Category Field with Dropdown Icon -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/ic_category"
+                        android:layout_marginEnd="8dp" />
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:paddingEnd="8dp" />
+
+                    <!-- Dropdown Icon -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="Dropdown Icon" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Note Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/ic_note"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/note"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Enter Note"
+                        android:inputType="text"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColorHint="#5E35B1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Location Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/ic_location"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Enter Location"
+                        android:inputType="text"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColorHint="#5E35B1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Buttons at Bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Back Button with Icon -->
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#EDEEFF"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:textSize="20sp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="16dp" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Add Order Button with Icon -->
+        <Button
+            android:id="@+id/addFoodBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Order"
+            android:textAllCaps="false"
+            android:textColor="#EDEEFF"
+            android:drawableLeft="@drawable/ic_add_food"
+            android:drawablePadding="8dp"
+            android:textSize="18sp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="13dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

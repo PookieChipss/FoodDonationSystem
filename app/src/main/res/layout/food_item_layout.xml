@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp"
+    android:background="#E6E6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Food Name -->
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+
+        <!-- Expiry Date -->
+        <TextView
+            android:id="@+id/expiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiry Date"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575" />
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575" />
+
+        <!-- Note -->
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

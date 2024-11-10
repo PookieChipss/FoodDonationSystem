@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/your_wallpaper_image">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Food Items"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#031530"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search by name or category"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_container" />
+
+    <Button
+        android:id="@+id/datePickerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:layout_below="@id/searchView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/curved_button"
+        android:textColor="#E6E6F8"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/selectedDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date: None"
+        android:layout_below="@id/searchView"
+        android:layout_toEndOf="@id/datePickerBtn"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textColor="#031530"
+        android:fontFamily="@font/poppins_regular" />
+
+    <ListView
+        android:id="@+id/foodListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/selectedDateTextView"
+        android:layout_above="@+id/backButtonLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/backButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:gravity="center"
+        android:background="@drawable/curved_button_background"
+        android:padding="12dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#E6E6F8"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold" />
+    </LinearLayout>
+
+</RelativeLayout>

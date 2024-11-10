@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FoodDonationSystem</string>
+
+    <!-- Array for Category Options (Including 'Choose a Category') -->
+    <string-array name="category_array">
+        <item>Choose a Category</item>
+        <item>Fruits</item>
+        <item>Vegetables</item>
+        <item>Dairy</item>
+        <item>Meat and Poultry</item>
+        <item>Seafood</item>
+        <item>Grains and Cereals</item>
+        <item>Sweets and Desserts</item>
+    </string-array>
+
+    <!-- Array for Filter Options -->
+    <string-array name="filter_array">
+        <item>All</item>
+        <item>Donate</item>
+        <item>Takeaway</item>
+    </string-array>
+
+    <!-- Array for Filter Options Status -->
+    <string-array name="filter_options">
+        <item>All</item>
+        <item>Donated</item>
+        <item>Taken Away</item>
+    </string-array>
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/your_wallpaper_image">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/foodDetailsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Details"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#031530"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Details Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:layout_below="@id/foodDetailsTitleTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Food Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_food"
+                    android:contentDescription="Food Icon" />
+
+                <TextView
+                    android:id="@+id/foodNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food Name: Sample Food"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+
+            <!-- Expiry Date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_calendar"
+                    android:contentDescription="Calendar Icon" />
+
+                <TextView
+                    android:id="@+id/expiryDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiry Date: YYYY-MM-DD"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+
+            <!-- Quantity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_quantity"
+                    android:contentDescription="Quantity Icon" />
+
+                <TextView
+                    android:id="@+id/quantityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity: 1"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+
+            <!-- Category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_category"
+                    android:contentDescription="Category Icon" />
+
+                <TextView
+                    android:id="@+id/categoryTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category: Category Name"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+
+            <!-- Note -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_note"
+                    android:contentDescription="Note Icon" />
+
+                <TextView
+                    android:id="@+id/noteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Note: Additional notes"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+
+            <!-- Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Location Icon" />
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location: Location details"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#031530"
+                    android:paddingStart="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action Buttons at Bottom -->
+    <LinearLayout
+        android:id="@+id/actionButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center">
+
+        <!-- Back Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/curved_button_background"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Back Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="#E6E6F8"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_bold" />
+        </LinearLayout>
+
+        <!-- Take Away Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/curved_button_background"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/takeAwayButton">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_take_away"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Take Away Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Away"
+                android:textColor="#E6E6F8"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

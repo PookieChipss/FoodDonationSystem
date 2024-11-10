@@ -1,0 +1,109 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/foodNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Name: "
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_bold" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: pending"
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <TextView
+            android:id="@+id/timestampTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity: "
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: "
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <TextView
+            android:id="@+id/noteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note: "
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: "
+            android:textSize="16sp"
+            android:textColor="#031530"
+            android:fontFamily="@font/poppins_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <!-- Edit Icon Button -->
+            <ImageButton
+                android:id="@+id/editIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_edit"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit" />
+
+            <!-- Delete Icon Button -->
+            <ImageButton
+                android:id="@+id/deleteIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

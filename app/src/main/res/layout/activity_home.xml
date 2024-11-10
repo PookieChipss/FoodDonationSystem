@@ -1,0 +1,290 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEEFF"
+    android:padding="16dp">
+
+    <!-- Tips Icon with Dark Blue Box at Top Right -->
+    <LinearLayout
+        android:id="@+id/tipsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_dark_blue_box"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_tips"
+            android:contentDescription="Tips Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tips"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E6E6F8"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#031530" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_marginTop="24dp">
+
+        <!-- Donate Food Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/donateFoodCard"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="0dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_donate_food"
+                    android:contentDescription="Donate Food Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Donate Food"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help us by donating food"
+                        android:textSize="17sp"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Take Away Food Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/takeAwayFoodCard"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="12dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="0dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_take_away_food"
+                    android:contentDescription="Take Away Food Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Take Away Food"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Receive food to take away"
+                        android:textSize="17sp"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Donation History Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/donationHistoryCard"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="12dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="0dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_donation_history"
+                    android:contentDescription="Donation History Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Donation History"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View your donation history"
+                        android:textSize="17sp"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Takeaway History Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/takeawayHistoryCard"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="12dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="0dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_takeaway_history"
+                    android:contentDescription="Takeaway History Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Takeaway History"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View your takeaway history"
+                        android:textSize="17sp"
+                        android:textColor="#5E35B1"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Logout Icon with Dark Blue Box at Bottom Left -->
+    <LinearLayout
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_dark_blue_box"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="Logout Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#E6E6F8"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+</RelativeLayout>
