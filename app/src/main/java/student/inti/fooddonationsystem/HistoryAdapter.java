@@ -85,6 +85,7 @@ public class HistoryAdapter extends ArrayAdapter<HistoryItem> {
         intent.putExtra("food_id", historyItem.getFood_id());
         intent.putExtra("user_id", historyItem.getUser_id());
         intent.putExtra("food_name", historyItem.getFood_name());
+        intent.putExtra("category", historyItem.getCategory());
         intent.putExtra("donation_status", historyItem.getStatus());
         intent.putExtra("location", historyItem.getLocation());
         intent.putExtra("quantity", String.valueOf(historyItem.getQuantity()));
